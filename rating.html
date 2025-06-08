@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate My Portfolio | My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #3f51b5;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .navbar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .content-box {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .rating-stars {
+            font-size: 30px;
+            color: #ccc;
+            margin: 20px 0;
+        }
+
+        .rating-stars input {
+            display: none;
+        }
+
+        .rating-stars label {
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.2s;
+        }
+
+        .rating-stars input:checked ~ label,
+        .rating-stars input:hover ~ label {
+            color: #3f51b5;
+        }
+
+        .feedback-form textarea,
+        .feedback-form input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .feedback-form button {
+            padding: 10px 20px;
+            background-color: #3f51b5;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .feedback-form button:hover {
+            background-color: #303f9f;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 0;
+            border-top: 5px solid white;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                 <li><a href="contact.html">contact</a></li>
+                <li><a href="social.html">Social Media</a></li>
+                <li><a href="events.html">events</a></li>
+                <li><a href="rating.html">Rate My Portfolio</a></li>
+                <li><a href="jobs.html">job openings</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-box">
+            <h2>Rate My Portfolio</h2>
+            <p>We'd love to hear your thoughts! Please rate your experience and provide feedback.</p>
+            <form class="feedback-form" action="submit_rating.php" method="POST">
+                <div class="rating-stars">
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5" title="5 stars">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4" title="4 stars">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" title="3 stars">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2" title="2 stars">★</label>
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1" title="1 star">★</label>
+                </div>
+                <textarea name="feedback" rows="5" placeholder="Share your feedback..." required></textarea>
+                <input type="text" name="name" placeholder="Your Name (Optional)">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+    <div class="footer">
+        <p>All Rights Reserved.</p>
+    </div>
+</body>
+</html>

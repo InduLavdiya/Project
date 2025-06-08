@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Portfolio</title>
+    <style>
+        /* General body styling */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3e5f5; /* Light lavender background */
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #3f51b5; /* Indigo */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 5px 10px;
+            font-size: 16px;
+        }
+
+        .navbar h1 {
+            text-align: center;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        /* Content box styling */
+        .content-box {
+            text-align: center;
+            max-width: 400px;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .content-box h2 {
+            color: #3f51b5; /* Indigo */
+            font-size: 1.5em;
+        }
+
+        .content-box p {
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .content-box .btn-know-more {
+            display: inline-block;
+            margin-top: 15px;
+            text-decoration: none;
+            background-color: #3f51b5;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .content-box .btn-know-more:hover {
+            background-color: #303f9f;
+        }
+
+        /* Footer styling */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #3f51b5; /* Indigo */
+            color: white;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+               <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                 <li><a href="contact.html">contact</a></li>
+                <li><a href="social.html">Social Media</a></li>
+                <li><a href="events.html">events</a></li>
+                <li><a href="rating.html">Rate My Portfolio</a></li>
+                <li><a href="jobs.html">job openings</a></li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-box">
+            <img src="data:image/jpeg;base64,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" alt="Profile Image">
+            <h2>Welcome to My Portfolio</h2>
+            <p>
+                Hi, I’m Jane Doe – a Creative UI/UX Designer from India. I specialize in designing user-friendly, visually appealing digital experiences. Explore my projects, services, and more!
+            </p>
+            <a href="about.html" class="btn-know-more">Know About Me More</a>
+        </div>
+    </main>
+    <div class="footer">
+        <p>All Rights Reserved.</p>
+    </div>
+</body>
+</html>
